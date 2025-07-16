@@ -11,3 +11,4 @@ payload:
   - DOMAIN-SUFFIX,ai.cuhk.edu.cn
   - DOMAIN-SUFFIX,i.cuhk.edu.cn
   - DOMAIN-SUFFIX,booking.cuhk.edu.cn
+  - DOMAIN-SUFFIX,library.cuhk.edu.cn
