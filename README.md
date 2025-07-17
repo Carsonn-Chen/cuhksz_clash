@@ -8,7 +8,7 @@
 
 * **自动切换网络**：访问图书馆、i.cuhk这些校内网站的时候，它会自动走学校的VPN。访问其他网站，就走你自己的代理。这样一来，就不用你再手动切换了，很方便！
 * **切换顺畅**：整个切换过程很顺畅，你几乎感觉不到。
-* **两不耽误**：访问校内资源和国外网站就两不耽误啦！
+* **两不耽误**：访问校内服务器和AI工具就两不耽误啦！
 
 ## 🚀 有什么优点？
 
@@ -61,6 +61,7 @@ echo "PASSWORD" | openconnect -u USERNAME --authgroup='CUHK(SZ)' --script-tun --
    * 把项目里的 `own_profile.yaml` 文件下载到你电脑上任何方便的位置，比如“下载”文件夹。
 
 2. **填写你的订阅链接 (这一步很重要！)**:
+
    * 用文本编辑器（比如VS Code或系统自带的“文本编辑”）打开刚刚下载的 `own_profile.yaml` 文件。
    * 在文件里找到 `proxy-providers` 下面的 `Sub`。
    * 在 `url:` 后面，把你自己的订阅链接填进去，然后保存文件。
@@ -107,8 +108,8 @@ echo "PASSWORD" | openconnect -u USERNAME --authgroup='CUHK(SZ)' --script-tun --
 
 **格式**:
 
-* 域名: `  - DOMAIN-SUFFIX,your.school.domain`
-* IP地址: `  - IP-CIDR,10.21.xx.xx/32`
+* 域名:   `  - DOMAIN-SUFFIX,your.school.domain`
+* IP地址:   `  - IP-CIDR,10.21.xx.xx/32`
 
 ### 担心密码安全？
 
@@ -116,3 +117,5 @@ echo "PASSWORD" | openconnect -u USERNAME --authgroup='CUHK(SZ)' --script-tun --
 
 ```
 openconnect -u USERNAME --authgroup='CUHK(SZ)' --script-tun --script='ocproxy -D 11080' vpn.cuhk.edu.cn
+```
+
