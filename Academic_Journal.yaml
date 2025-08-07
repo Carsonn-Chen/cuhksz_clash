@@ -1,0 +1,56 @@
+# academics Rule Set
+
+payload:
+# 常用生物领域学术期刊域名 Clash 规则
+  - DOMAIN-SUFFIX,nature.com
+  - DOMAIN-SUFFIX,sciencemag.org
+  - DOMAIN-SUFFIX,cell.com
+  - DOMAIN-SUFFIX,springer.com
+  - DOMAIN-SUFFIX,springernature.com
+  - DOMAIN-SUFFIX,wiley.com
+  - DOMAIN-SUFFIX,tandfonline.com
+  - DOMAIN-SUFFIX,sciencedirect.com
+  - DOMAIN-SUFFIX,jstor.org
+  - DOMAIN-SUFFIX,oup.com
+  - DOMAIN-SUFFIX,cambridge.org
+  - DOMAIN-SUFFIX,sagepub.com
+  - DOMAIN-SUFFIX,mdpi.com
+  - DOMAIN-SUFFIX,frontiersin.org
+  - DOMAIN-SUFFIX,acs.org
+  - DOMAIN-SUFFIX,rsc.org
+  - DOMAIN-SUFFIX,biomedcentral.com
+  - DOMAIN-SUFFIX,plos.org
+  - DOMAIN-SUFFIX,elifesciences.org
+  - DOMAIN-SUFFIX,pnas.org
+  - DOMAIN-SUFFIX,aaas.org
+  - DOMAIN-SUFFIX,lww.com
+  - DOMAIN-SUFFIX,karger.com
+  - DOMAIN-SUFFIX,hindawi.com
+  - DOMAIN-SUFFIX,spandidos-publications.com
+  - DOMAIN-SUFFIX,genetics.org
+  - DOMAIN-SUFFIX,microbiologyresearch.org
+  - DOMAIN-SUFFIX,asm.org
+  - DOMAIN-SUFFIX,embopress.org
+  - DOMAIN-SUFFIX,biologists.com
+  - DOMAIN-SUFFIX,annualreviews.org
+  - DOMAIN-SUFFIX,springeropen.com
+  - DOMAIN-SUFFIX,biorxiv.org
+  - DOMAIN-SUFFIX,medrxiv.org
+  - DOMAIN-SUFFIX,researchsquare.com
+  - DOMAIN-SUFFIX,scitation.org
+  - DOMAIN-SUFFIX,intechopen.com
+  - DOMAIN-SUFFIX,degruyter.com
+  - DOMAIN-SUFFIX,wiley-vch.de
+  - DOMAIN-SUFFIX,scirp.org
+  - DOMAIN-SUFFIX,peerj.com
+  - DOMAIN-SUFFIX,jneurosci.org
+  - DOMAIN-SUFFIX,jci.org
+  - DOMAIN-SUFFIX,bloodjournal.org
+  - DOMAIN-SUFFIX,aacrjournals.org
+  - DOMAIN-SUFFIX,ashpublications.org
+  - DOMAIN-SUFFIX,bmj.com
+  - DOMAIN-SUFFIX,thelancet.com
+  - DOMAIN-SUFFIX,nejm.org
+  - DOMAIN-SUFFIX,nature-asia.com
+  - DOMAIN-SUFFIX,naturechina.com
+  
