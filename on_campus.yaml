@@ -87,7 +87,7 @@ i: &a7 { type: http, behavior: ipcidr, interval: 86400 }
 proxy-providers:
   Sub:
     <<: *a1
-    url: https://huaikhwang.central-world.org/api/v1/trails/bolster?token=091bf421529db32d3fe30f8eeff79466
+    url: 
     path: ./proxy_providers/sub.yaml
 
 proxy-groups:

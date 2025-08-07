@@ -232,11 +232,19 @@ rule-providers:
       url: https://raw.githubusercontent.com/Carsonn-Chen/cuhksz_clash/refs/heads/main/School_Rules.yaml,
       path: ./ruleset/School.yaml,
     }
+  Journal:
+    {
+      <<: *a6,
+      url: https://cdn.jsdelivr.net/gh/Carsonn-Chen/cuhksz_clash@main/Academic_Journal.yaml,
+      path: ./ruleset/Journal.yaml,
+    }
 
 # 分流Policy
 rules:
+  - DST-PORT,22,DIRECT
   - DOMAIN,vpn.cuhk.edu.cn,DIRECT
   - RULE-SET,School,🎓 校内专线
+  - RULE-SET,Journal,🎓 校内专线
   - RULE-SET,Ad,🆎 AdBlock
   - RULE-SET,Ai,🤖 Ai
   - RULE-SET,Adobe,🎨 Adobe
