@@ -8,7 +8,4 @@ payload:
 
   # --- 域名规则 ---
   # 适用于所有学校官方网站、图书馆、选课系统、在线学习平台等。
-  - DOMAIN-SUFFIX,ai.cuhk.edu.cn
-  - DOMAIN-SUFFIX,i.cuhk.edu.cn
-  - DOMAIN-SUFFIX,booking.cuhk.edu.cn
-  - DOMAIN-SUFFIX,library.cuhk.edu.cn
+  - DOMAIN-SUFFIX,cuhk.edu.cn
