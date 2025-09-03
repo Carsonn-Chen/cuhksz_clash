@@ -7,7 +7,35 @@ bind-address: "*" # 地址绑定
 mode: rule # 规则模式
 log-level: info # 日志级别
 ipv6: true # IPV6开关
+profile:
+  store-selected: true
+  store-fake-ip: true
+unified-delay: true
+tcp-concurrent: true
+
 external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+secret: "szmxyzh"
+
+geodata-mode: true
+geox-url:
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+geo-update-interval: 24
+geodata-loader: standard
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
 
 dns:
   enable: true # 不使用系统 DNS
@@ -51,8 +79,15 @@ p: &a1 { type: http, interval: 86400, health-check: { enable: true, url: http://
 auto: &a4 { type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [Sub] }
 use: &a2 { type: select, use: [Sub] }
 c: &a6 { type: http, behavior: classical, interval: 86400 }
-d: &a5 { type: http, behavior: domain, interval: 86400 }
+d: &a5 { type: http, behavior: domain, format: mrs, interval: 86400 }
 i: &a7 { type: http, behavior: ipcidr, interval: 86400 }
+
+proxies:
+  - name: "🏫 cuhksz" # 节点名字，可以自己取
+    type: socks5 # 代理类型，ocproxy -D 创建的是 socks5
+    server: 127.0.0.1 # 服务器地址，就是本机
+    port: 11080 # 端口号，必须和你命令中 -D 11080 设置的一致
+    udp: true # 强烈建议开启，兼容性更好
 
 proxy-providers:
   Sub:
@@ -75,6 +110,7 @@ proxy-groups:
   - { name: 🎮 游戏平台, <<: *a3 }
   - { name: 🆎 AdBlock, type: select, proxies: [REJECT] }
   - { name: 🐟 兜底分流, <<: *a3 }
+  - { name: "🎓 校内专线", type: select, proxies: [🏫 cuhksz, DIRECT] }
 
   #节点分组
   - { name: 🇭🇰 香港节点, <<: *a2, filter: "(?i)港|hk|hong" } # a4更改为a2，即为手动选择
@@ -85,7 +121,7 @@ proxy-groups:
 
 # 分流规则
 rule-providers:
-  Ad: { <<: *a5, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt, path: ./ruleset/anti-ad-clash.yaml }
+  Ad: { <<: *a5, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules-mihomo.mrs, path: ./ruleset/anti-ad-clash.yaml }
   Ai: { <<: *a6, url: https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml, path: ./ruleset/Ai.yaml }
   Adobe: { <<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Adobe/Adobe.yaml, path: ./ruleset/Adobe.yaml }
   BiliBili: { <<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml, path: ./ruleset/BiliBili.yaml }
@@ -103,18 +139,18 @@ rule-providers:
   ChinaIP: { <<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml, path: ./ruleset/ChinaIP.yaml }
   School: { <<: *a6, url: https://cdn.jsdelivr.net/gh/Carsonn-Chen/cuhksz_clash@main/School_Rules.yaml, path: ./ruleset/School.yaml }
   Journal: { <<: *a6, url: https://cdn.jsdelivr.net/gh/Carsonn-Chen/cuhksz_clash@main/Academic_Journal.yaml, path: ./ruleset/Journal.yaml }
+
 # 分流Policy
 rules:
-  - DST-PORT,22,DIRECT
-  - RULE-SET,School,DIRECT
-  - RULE-SET,Journal,DIRECT
+  - RULE-SET,School,🎓 校内专线
+  - RULE-SET,Journal,🎓 校内专线
   - RULE-SET,Ad,🆎 AdBlock
   - RULE-SET,Ai,🤖 Ai
   - RULE-SET,Adobe,🎨 Adobe
   - RULE-SET,BiliBili,📺 哔哩哔哩
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,Github,🌏 全球加速
-  - RULE-SET,Microsoft, 🌏 全球加速
+  - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Google,🌌 谷歌服务
   - RULE-SET,Telegram,📟 电报消息
   - RULE-SET,Twitter,🌏 全球加速
