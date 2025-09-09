@@ -142,6 +142,7 @@ rule-providers:
 # 分流Policy
 rules:
   - DST-PORT,22,DIRECT
+  - DOMAIN-SUFFIX,vpn.cuhk.edu.cn,DIRECT
   - RULE-SET,School,🎓 校内专线
   - RULE-SET,Journal,🎓 校内专线
   - RULE-SET,Ad,🆎 AdBlock
