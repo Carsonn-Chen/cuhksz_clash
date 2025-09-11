@@ -54,3 +54,8 @@ payload:
   - DOMAIN-SUFFIX,nature-asia.com
   - DOMAIN-SUFFIX,naturechina.com
   - DOMAIN-SUFFIX,thelancet.com
+  - DOMAIN-SUFFIX,jamanetwork.com
+  - DOMAIN-SUFFIX,science.org
+  - DOMAIN-SUFFIX,ascopubs.org
+  - DOMAIN-SUFFIX,journals.plos.org
+  - DOMAIN-SUFFIX,onlinelibrary.wiley.com
