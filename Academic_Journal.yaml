@@ -59,3 +59,43 @@ payload:
   - DOMAIN-SUFFIX,ascopubs.org
   - DOMAIN-SUFFIX,journals.plos.org
   - DOMAIN-SUFFIX,onlinelibrary.wiley.com
+  - DOMAIN-SUFFIX,jbc.org
+  - DOMAIN-SUFFIX,mcb.asm.org
+  - DOMAIN-SUFFIX,molbiolcell.org
+  - DOMAIN-SUFFIX,genesdev.cshlp.org
+  - DOMAIN-SUFFIX,genome.org
+  - DOMAIN-SUFFIX,plantcell.org
+  - DOMAIN-SUFFIX,plantphysiol.org
+  - DOMAIN-SUFFIX,jimmunol.org
+  - DOMAIN-SUFFIX,cancerres.aacrjournals.org
+  - DOMAIN-SUFFIX,clinchem.org
+  - DOMAIN-SUFFIX,diabetesjournals.org
+  - DOMAIN-SUFFIX,circ.ahajournals.org
+  - DOMAIN-SUFFIX,ahajournals.org
+  - DOMAIN-SUFFIX,jacc.org
+  - DOMAIN-SUFFIX,annals.org
+  - DOMAIN-SUFFIX,acpjournals.org
+  - DOMAIN-SUFFIX,gastrojournal.org
+  - DOMAIN-SUFFIX,hepatology.aasldjournals.org
+  - DOMAIN-SUFFIX,kidney-international.org
+  - DOMAIN-SUFFIX,ajkd.org
+  - DOMAIN-SUFFIX,psychosomaticmedicine.org
+  - DOMAIN-SUFFIX,psychoneuroendocrinology.com
+  - DOMAIN-SUFFIX,ncbi.nlm.nih.gov
+  - DOMAIN-SUFFIX,europepmc.org
+  - DOMAIN-SUFFIX,f1000research.com
+  - DOMAIN-SUFFIX,g3journal.org
+  - DOMAIN-SUFFIX,elsevier.com
+  - DOMAIN-SUFFIX,elsevierhealth.com
+  - DOMAIN-SUFFIX,lancet.com
+  - DOMAIN-SUFFIX,immunity.com
+  - DOMAIN-SUFFIX,molecular-cell.com
+  - DOMAIN-SUFFIX,developmental-cell.com
+  - DOMAIN-SUFFIX,current-biology.com
+  - DOMAIN-SUFFIX,structure.org
+  - DOMAIN-SUFFIX,chemistry-biology.com
+  - DOMAIN-SUFFIX,trends.com
+  - DOMAIN-SUFFIX,elsevier.es
+  - DOMAIN-SUFFIX,elsevier.nl
+  - DOMAIN-SUFFIX,elsevier.fr
+  - DOMAIN-SUFFIX,elsevier.de
