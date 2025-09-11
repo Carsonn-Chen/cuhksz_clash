@@ -1,7 +1,7 @@
 # academic journal Rule Set
 
 payload:
-# 常用生物领域学术期刊域名 Clash 规则
+  # 常用生物领域学术期刊域名 Clash 规则
   - DOMAIN-SUFFIX,nature.com
   - DOMAIN-SUFFIX,sciencemag.org
   - DOMAIN-SUFFIX,cell.com
@@ -53,4 +53,4 @@ payload:
   - DOMAIN-SUFFIX,nejm.org
   - DOMAIN-SUFFIX,nature-asia.com
   - DOMAIN-SUFFIX,naturechina.com
-  
+  - DOMAIN-SUFFIX,thelancet.com
