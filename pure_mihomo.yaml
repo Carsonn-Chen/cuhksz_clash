@@ -44,6 +44,7 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
+    - "+.cuhk.edu.cn"
     - "*.lan"
     - localhost.ptlogin2.qq.com
     - +.srv.nintendo.net
@@ -58,13 +59,14 @@ dns:
     - "*.blzstatic.cn"
     - "*.battle.net"
   nameserver: # 默认 DNS 服务
-    - system
     - 223.5.5.5
     - 119.29.29.29
   fallback: # 国外 DNS 服务器
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
     - https://dns.alidns.com/dns-query
+  nameserver-policy:
+    "*.cuhk.edu.cn": "10.20.220.50"
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -141,7 +143,6 @@ rule-providers:
 
 # 分流Policy
 rules:
-  - DST-PORT,22,DIRECT
   - DOMAIN-SUFFIX,vpn.cuhk.edu.cn,DIRECT
   - RULE-SET,School,🎓 校内专线
   - RULE-SET,Journal,🎓 校内专线
