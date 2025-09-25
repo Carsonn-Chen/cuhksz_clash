@@ -31,7 +31,6 @@ tun:
   enable: true
   stack: mixed
   auto-route: true
-  auto-redirect: true
   auto-detect-interface: true
   dns-hijack:
     - any:53
@@ -124,6 +123,7 @@ proxy-groups:
 rule-providers:
   Ad: { <<: *a5, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules-mihomo.mrs, path: ./ruleset/anti-ad-clash.yaml }
   Ai: { <<: *a6, url: https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml, path: ./ruleset/Ai.yaml }
+  Spotify: { <<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml, path: ./ruleset/Spotify.yaml }
   Adobe: { <<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Adobe/Adobe.yaml, path: ./ruleset/Adobe.yaml }
   BiliBili: { <<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml, path: ./ruleset/BiliBili.yaml }
   Apple: { <<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml, path: ./ruleset/Apple.yaml }
@@ -156,7 +156,7 @@ rules:
   - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Google,🌌 谷歌服务
   - RULE-SET,Telegram,📟 电报消息
-  - RULE-SET,Twitter,🌏 全球加速
+  - RULE-SET,Twitter,🐦 推特服务
   - RULE-SET,Game,🎮 游戏平台
   - RULE-SET,ProxyLite,🌏 全球加速
   - RULE-SET,Direct,DIRECT
