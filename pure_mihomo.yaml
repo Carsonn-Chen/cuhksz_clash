@@ -35,6 +35,7 @@ tun:
   dns-hijack:
     - any:53
     - tcp://any:53
+    - tcp://any:853
 
 dns:
   enable: true # 不使用系统 DNS
@@ -45,6 +46,8 @@ dns:
   fake-ip-filter:
     - "+.cuhk.edu.cn"
     - "*.lan"
+    - "*.local"
+    - "*.localhost"
     - localhost.ptlogin2.qq.com
     - +.srv.nintendo.net
     - +.stun.playstation.net
@@ -149,6 +152,7 @@ rules:
   - RULE-SET,Journal,🎓 校内专线
   - RULE-SET,Ad,🆎 AdBlock
   - RULE-SET,Ai,🤖 Ai
+  - RULE-SET,Spotify,🎵 Spotify
   - RULE-SET,Adobe,🎨 Adobe
   - RULE-SET,BiliBili,📺 哔哩哔哩
   - RULE-SET,Apple,🍎 苹果服务
