@@ -6,7 +6,7 @@ allow-lan: true # 允许局域网连接
 bind-address: "*" # 地址绑定
 mode: rule # 规则模式
 log-level: info # 日志级别
-ipv6: true # IPV6开关
+ipv6: false # IPV6开关
 profile:
   store-selected: true
   store-fake-ip: true
@@ -39,7 +39,7 @@ tun:
 
 dns:
   enable: true # 不使用系统 DNS
-  ipv6: true # 开启 IPV6
+  ipv6: false # 开启 IPV6
   listen: 0.0.0.0:53 # dns 监听
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
